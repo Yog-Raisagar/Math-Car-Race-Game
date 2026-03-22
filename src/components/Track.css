@@ -1,0 +1,225 @@
+/* Track.css */
+.track-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(6px, .8vh, 12px);
+  height: 100%;
+  width: 100%;
+}
+
+.finish-banner {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(13px, 1.6vw, 20px);
+  color: #fff;
+  background: linear-gradient(90deg, #1e293b, #334155);
+  border-radius: 14px;
+  padding: clamp(5px, .6vh, 8px) clamp(16px, 2vw, 28px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border: 2px solid #cbd5e1;
+}
+
+.track-scene {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 4px solid rgba(255, 255, 255, .75);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .18);
+  background: #22c55e;
+}
+
+/* Grass Background with pattern */
+.grass-bg {
+  position: absolute;
+  inset: 0;
+  background-color: #22c55e;
+  background-image: radial-gradient(#16a34a 15%, transparent 16%), radial-gradient(#16a34a 15%, transparent 16%);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  opacity: 0.8;
+}
+
+/* Asphalt Track */
+.asphalt-track {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15%;
+  right: 15%;
+  background: #334155;
+  border-left: 4px solid #94a3b8;
+  border-right: 4px solid #94a3b8;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+
+/* Center Dashed Line */
+.center-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 8px;
+  transform: translateX(-50%);
+  background-image: repeating-linear-gradient(to bottom, #cbd5e1 0, #cbd5e1 40px, transparent 40px, transparent 80px);
+  opacity: 0.9;
+}
+
+/* Rumble Strips */
+.rumble-strip {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 16px;
+  background-image: repeating-linear-gradient(to bottom, #ef4444 0, #ef4444 30px, #ffffff 30px, #ffffff 60px);
+}
+.left-rumble { left: 0; }
+.right-rumble { right: 0; }
+
+/* Stripes */
+.finish-stripe {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  right: 0;
+  height: 16px;
+  z-index: 6;
+  background-image: repeating-linear-gradient(to right, #000 0, #000 16px, #fff 16px, #fff 32px);
+  opacity: .9;
+}
+
+.start-stripe {
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  height: 6px;
+  z-index: 6;
+  background: #fff;
+  opacity: 0.9;
+}
+
+/* Step Markers */
+.step-markers {
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.lane-marker {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.marker-line {
+  flex: 1;
+  height: 2px;
+  background: rgba(255, 255, 255, .15);
+}
+.marker-gap {
+  width: 20%;
+}
+
+/* Lane Labels */
+.lane-label {
+  position: absolute;
+  top: 5.8%;
+  z-index: 7;
+  font-family: 'Fredoka One', cursive;
+  font-size: 11px;
+  color: white;
+  border-radius: 0 0 8px 8px;
+  padding: 3px 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .45);
+}
+
+.lane-p1-label {
+  left: 17%;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  box-shadow: 0 3px 10px rgba(59, 130, 246, .45);
+}
+
+.lane-p2-label {
+  right: 17%;
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  box-shadow: 0 3px 10px rgba(239, 68, 68, .45);
+}
+
+/* Cars */
+.car-wrapper {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  transition: top .65s cubic-bezier(.34, 1.56, .64, 1);
+  z-index: 8;
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, .4));
+}
+
+.car-p1 { left: 28%; }
+.car-p2 { left: 72%; }
+
+/* Start Label */
+.start-label {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(12px, 1.4vw, 17px);
+  color: #1e3a5f;
+  background: rgba(255, 255, 255, .85);
+  border-radius: 10px;
+  padding: clamp(3px, .4vh, 6px) clamp(16px, 2vw, 28px);
+  border: 2px solid #94a3b8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+  flex-shrink: 0;
+}
+
+/* Progress Bars */
+.progress-bars {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(5px, .6vh, 8px);
+  flex-shrink: 0;
+}
+.progress-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.progress-label {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: clamp(11px, 1.2vw, 15px);
+  color: #1e293b;
+  min-width: 44px;
+}
+.progress-bar {
+  flex: 1;
+  background: #f1f5f9;
+  border-radius: 999px;
+  height: clamp(10px, 1.2vh, 14px);
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .12);
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width .6s cubic-bezier(.34, 1.56, .64, 1);
+}
+.progress-text {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: clamp(11px, 1.2vw, 14px);
+  color: #1e293b;
+  min-width: 36px;
+  text-align: right;
+}
