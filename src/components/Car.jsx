@@ -3,7 +3,7 @@ import './Car.css';
 function Car({ isP1, bounce }) {
   /* color palette for kids: bright, vibrant */
   const bodyColor = isP1 ? "#3b82f6" : "#ef4444"; // Vivid Blue or Vivid Red
-  const highlight = isP1 ? "#93c5fd" : "#fca5a5"; 
+  const highlight = isP1 ? "#93c5fd" : "#fca5a5";
   const shadowColor = isP1 ? "#1e3a8a" : "#7f1d1d";
   const windowColor = "#bae6fd"; // bright shiny glass
   const n = isP1 ? "A" : "B";
@@ -53,7 +53,7 @@ function Car({ isP1, bounce }) {
         {/* Main Body (Chubby & Cute) */}
         <path d="M 18 30 C 18 10, 58 10, 58 30 L 58 80 C 58 100, 18 100, 18 80 Z" fill={shadowColor} />
         <path d="M 18 28 C 18 8, 58 8, 58 28 L 58 78 C 58 98, 18 98, 18 78 Z" fill={bodyColor} />
-        
+
         {/* Shiny Body Highlight */}
         <path d="M 24 24 C 24 16, 52 16, 52 24 L 52 74 C 52 82, 24 82, 24 74 Z" fill="none" stroke={highlight} strokeWidth="3" opacity="0.6" strokeLinecap="round" />
 
@@ -89,7 +89,7 @@ function Car({ isP1, bounce }) {
         <circle cx="24" cy="18" r="3" fill="#ffffff" />
         <circle cx="52" cy="18" r="5" fill="#fef08a" />
         <circle cx="52" cy="18" r="3" fill="#ffffff" />
-        
+
         {/* Headlight Beams (only visible on bounce) */}
         {bounce && (
           <g opacity="0.6">

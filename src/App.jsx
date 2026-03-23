@@ -96,7 +96,7 @@ export default function App() {
       <div className="app-root">
         {/* ── TITLE ── */}
         <div className="game-title">
-          🏎️ Math Car Race! 🏁
+          Math Car Race!
         </div>
 
         {/* ── MAIN ROW: panel ─── gap ─── track ─── gap ─── panel ── */}

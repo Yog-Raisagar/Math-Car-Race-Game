@@ -2,12 +2,15 @@
   0% {
     transform: translateY(0) scale(1);
   }
+
   30% {
     transform: translateY(8px) scale(0.98);
   }
+
   70% {
     transform: translateY(-20px) scale(1.03);
   }
+
   100% {
     transform: translateY(0) scale(1);
   }
@@ -17,12 +20,15 @@
   0% {
     transform: translateY(0) scale(1);
   }
+
   30% {
     transform: translateY(8px) scale(0.98);
   }
+
   70% {
     transform: translateY(-20px) scale(1.03);
   }
+
   100% {
     transform: translateY(0) scale(1);
   }
@@ -33,6 +39,7 @@
     transform: translateY(0) scale(0.3);
     opacity: 0.8;
   }
+
   100% {
     transform: translateY(30px) scale(2.5);
     opacity: 0;
@@ -40,18 +47,24 @@
 }
 
 @keyframes carIdleA {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(1.5px);
   }
 }
 
 @keyframes carIdleB {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(1.5px) scaleX(1.01);
   }

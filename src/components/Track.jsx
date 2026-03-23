@@ -12,7 +12,7 @@ function Track({ p1Pos, p2Pos, p1Bounce, p2Bounce }) {
     <div className="track-container">
       {/* FINISH banner */}
       <div className="finish-banner">
-        🏁 FINISH LINE 🏁
+        FINISH LINE
       </div>
 
       {/* ── THE TRACK SCENE ── */}
@@ -75,7 +75,7 @@ function Track({ p1Pos, p2Pos, p1Bounce, p2Bounce }) {
 
       {/* START label */}
       <div className="start-label">
-        🚦 START 🚦
+        START
       </div>
 
       {/* progress bars */}
